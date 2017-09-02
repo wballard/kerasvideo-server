@@ -4,7 +4,6 @@ Train an MNIST image recognition model.
 
 import keras
 import numpy as np
-from keras.callbacks import EarlyStopping
 from keras.datasets import mnist
 from keras.layers import (Conv2D, Dense, Dropout, Flatten, Input, MaxPooling1D,
                           MaxPooling2D, BatchNormalization)
@@ -39,12 +38,10 @@ print(model.summary())
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
-early_stopping = EarlyStopping(monitor='loss', patience=2)
 history = model.fit(x_train, y_train,
                     batch_size=64,
-                    epochs=64,
+                    epochs=8,
                     verbose=1,
-                    callbacks=[early_stopping],
                     validation_data=(x_test, y_test))
 
 # save the model in an HDF5 file, built in to keras
