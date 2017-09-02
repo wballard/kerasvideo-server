@@ -30,3 +30,10 @@ the classification results are serialized to JSON and returned.
 ## Utilities
 `dump_mnist.py` is provided to create a set of image files from the encoded MNIST digit dataset in order to
 exercise the post API.
+
+## Docker
+The included Dockerfile will create a container, complete with the REST server -- and pretrained models. Distributing
+your models to your running servers in practice is a mildly painful exercise, so packing the binary data of the
+trained model into a Docker container eases deployment.
+
+With this Docker based approach, the server and model are completely self contained.

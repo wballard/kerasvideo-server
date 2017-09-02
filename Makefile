@@ -9,3 +9,6 @@ test:
 
 debug:
 	python server.py
+
+var/data/mnist.h5:
+	python train_mnist.py
