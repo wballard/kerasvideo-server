@@ -11,7 +11,7 @@ python train_mnist.py
 python server.py
 ```
 
-Open your browser to (http://localhost:4000/ui).
+Open your browser to (http://localhost:5000/ui).
 
 
 ## Models

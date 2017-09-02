@@ -5,7 +5,7 @@ install:
 
 #server will need to be running
 test:
-	curl -F file=@var/data/sample-0.jpg http://localhost:5000/mnist/classify
+	curl -F file=@var/data/sample-0.png http://localhost:5000/mnist/classify
 
 debug:
 	python server.py

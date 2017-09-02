@@ -16,4 +16,4 @@ application.add_api('models.yaml')
 
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(debug=False)
