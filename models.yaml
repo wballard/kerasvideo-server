@@ -8,7 +8,7 @@ paths:
   /mnist/classify:
     post:
       summary: Classify Digits
-      description: Generates a greeting message from a post, such as curl -F file=@sample.png http://localhost:4000/mnist/classify
+      description: Generates a greeting message from a post, such as curl -F file=@sample.png http://localhost:5000/mnist/classify
       operationId: mnist.post_image
       consumes:
         - multipart/form-data
