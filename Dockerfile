@@ -1,5 +1,5 @@
 #base image provides CUDA support on Ubuntu 16.04
-FROM nvidia/cuda:8.0-cudnn6-devel
+FROM nvidia/cuda:9.0-cudnn7-devel
 
 ENV CONDA_DIR /opt/conda
 ENV PATH $CONDA_DIR/bin:$PATH
@@ -37,4 +37,4 @@ RUN cd /src && python train_mnist.py
 USER keras
 WORKDIR /src
 EXPOSE 5000
-CMD python server.py
+CMD cd /src && FLASK_ENV=development python server.py

@@ -13,9 +13,17 @@ python server.py
 
 Open your browser to (http://localhost:5000/ui).
 
+# Quick Start Docker
+```
+docker build --tag kerasvideo-server .
+docker run -p 5000:5000 kerasvideo-server
+```
+
+Open your browser to (http://localhost:5000/ui).
 
 ## Models
-Models are pretrained and saved individually, and then served at REST API endpoints.
+Models are pretrained and saved individually, and then served at REST API endpoints. You will need a 
+model trained in order for the server to process!
 
 ### `train_mnist.py`
 Classification models are provided for MNIST digits, which creates a saved model file resulting
@@ -26,10 +34,6 @@ The server is a python script
 API endpoints handle posted files, and conversion to the appropriate vector encoding for use with
 keras. Once a `POST` image is encoded, it is sent to the loaded model for classification. Once classified,
 the classification results are serialized to JSON and returned.
-
-## Utilities
-`dump_mnist.py` is provided to create a set of image files from the encoded MNIST digit dataset in order to
-exercise the post API.
 
 ## Docker
 The included Dockerfile will create a container, complete with the REST server -- and pretrained models. Distributing
